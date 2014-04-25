@@ -24,7 +24,7 @@ class alipay{
 		}
 		$this->response($sign);
 	}
-	//加签
+	//加签 
 	private function sign($data) {
 		$priKey = file_get_contents($this->rsaPrivateKeyFilePath);
 		$res = openssl_get_privatekey($priKey);  //这里是开发者的私钥
